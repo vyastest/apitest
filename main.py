@@ -1,7 +1,7 @@
 import openai
 import streamlit as st
 import os
-
+import pandas as pd
 # Add sidebar content
 st.sidebar.title("ChatGPT-")
 #st.sidebar.markdown("This app demonstrates a ChatGPT-like clone using Streamlit and the OpenAI API.")
