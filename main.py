@@ -18,7 +18,7 @@ question="which striker has the most runs off bat according to information in th
 prompt = f"Dataset:\n{df}\nQuestion: {question}\nInsights:"
 
 model = "text-davinci-003"
-response = openai.Completion.create(engine=model, prompt=prompt, max_tokens=50)
+response = openai.Completion.create(engine=model, prompt=prompt, max_tokens=100)
 
 generated_text = response.choices[0].text
 st.write(generated_text)
