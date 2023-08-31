@@ -16,7 +16,6 @@ data=pd.read_csv("teststream.csv")
 question="which striker has the most runs off bat?"
 prompt = f"Dataset:\n{data}\nQuestion: {question}\nInsights:"
 
-#prompt = "india are the best team in cricket and have played strong games in past 10 years winning in all countries home and away..Please summarise the sentence in 8 words"
 model = "text-davinci-003"
 response = openai.Completion.create(engine=model, prompt=prompt, max_tokens=50)
 
