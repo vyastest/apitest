@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 import os
 import pandas as pd
-data=pd.read_csv("teststream.csv")
+df=pd.read_csv("teststream.csv")
 
 # Add sidebar content
 st.sidebar.title("ChatGPT-")
@@ -14,8 +14,8 @@ st.sidebar.title("ChatGPT-")
 
 openai.api_key = st.secrets["my_api_key"]
 
-question="which striker has the most runs off bat?"
-prompt = f"Dataset:\n{data}\nQuestion: {question}\nInsights:"
+question="which striker has the most runs off bat according to information in the df dataframe?"
+prompt = f"Dataset:\n{df}\nQuestion: {question}\nInsights:"
 
 model = "text-davinci-003"
 response = openai.Completion.create(engine=model, prompt=prompt, max_tokens=50)
