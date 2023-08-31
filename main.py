@@ -1,5 +1,6 @@
 import openai
 import streamlit as st
+import os
 
 # Add sidebar content
 st.sidebar.title("ChatGPT-")
@@ -9,7 +10,8 @@ st.sidebar.title("ChatGPT-")
 # Request API Key in the sidebar
 #api_key = st.sidebar.text_input("Enter your OpenAI API Key", type="password")
 
-openai.api_key = 'SECRET_API_KEY'
+api_key = os.environ.get("SECRET_API_KEY")
+
 
 prompt = "the massage was really good and reception guys sunil and imran very polite and they understand what customer requirements are my back was paining so they suggested me to take aroma massage it was relaxing.  massage was amazing super..Please summarise the sentence in 8 words"
 model = "text-davinci-003"
