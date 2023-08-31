@@ -14,7 +14,7 @@ st.sidebar.title("ChatGPT-")
 
 openai.api_key = st.secrets["my_api_key"]
 
-question="group by striker and find total sum of runs_off_bat and order in descending and say which striker comes in first row"
+question="Which striker had the most total runs_off_bat?"
 prompt = f"Dataset:\n{df}\nQuestion: {question}\nInsights:"
 
 model = "text-davinci-003"
