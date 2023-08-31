@@ -14,7 +14,7 @@ st.sidebar.title("ChatGPT-")
 
 openai.api_key = st.secrets["my_api_key"]
 
-question="which striker has the most runs off bat according to information in the df dataframe?"
+question="which striker has the most runs off bat according to information in the df dataframe? Please calculate and tell the answer"
 prompt = f"Dataset:\n{df}\nQuestion: {question}\nInsights:"
 
 model = "text-davinci-003"
